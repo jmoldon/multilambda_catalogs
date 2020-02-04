@@ -133,18 +133,7 @@ And the output in catalogs is:
 ```
 Some of those resulting images are:
 
-DSS
-![DSS](example_output/m51_DSS.fits.png)  
-NVSS
-![NVSS](example_output/m51_NVSS.fits.png)  
-VLSSr
-![VLSSr](example_output/m51_VLSSr.fits.png)  
-WENSS
-![WENSS](example_output/m51_WENSS.fits.png)  
-SDSSr
-![SDSSr](example_output/m51_SDSSr.fits.png)  
-TGSS
-![TGSS](example_output/m51_TGSS_ADR1.fits.png)  
+[example_combined](example_output/example_output.gif}
 
 
 
