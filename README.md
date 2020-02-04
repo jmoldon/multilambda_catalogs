@@ -133,7 +133,7 @@ And the output in catalogs is:
 ```
 Some of those resulting images are:
 
-[example_combined](example_output/example_output.gif}
+![example_combined](example_output/example_output.gif)
 
 
 
