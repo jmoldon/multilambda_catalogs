@@ -20,7 +20,9 @@ def fits2png(fitsfile):
            out = fitsfile+'.png')
 
 name = sys.argv[-1]
-filenames = glob.glob('{0}_*.fits'.format(name))
+print(name)
+print('Searching files matching: {0}*fits'.format(name))
+filenames = glob.glob('{0}*.fits'.format(name))
 print('Converting files: {0}'.format(filenames))
 for filename in filenames:
     fits2png(filename)
