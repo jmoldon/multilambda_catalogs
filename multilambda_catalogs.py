@@ -84,7 +84,7 @@ if __name__ == '__main__':
     args = get_args()
     name = args.name
     coords = SkyCoord(args.ra, args.de, unit=(u.hourangle, u.deg), frame='icrs')
-    radius = args.radius*u.arcmin
+    radius = float(args.radius)*u.arcmin
     surveys = args.surveys
     print(surveys)
     urls, valid_surveys, missing_surveys = get_url(coords=coords, surveys=surveys, radius=radius)
