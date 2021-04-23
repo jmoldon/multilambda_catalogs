@@ -71,8 +71,12 @@ def get_args():
     parser.add_argument('-ra', dest='ra', help='R.A. coordinates in format  00:00:00.0')
     parser.add_argument('-de', dest='de', help='Dec. coordinates in format +00:00:00.0')
     parser.add_argument('-r', '--radius', dest='radius', help='Search radius in armin', default=35.)
+    parser.add_argument('--png', dest='png', action='store_true')
+    parser.add_argument('--no-png', dest='png', action='store_false')
+    parser.set_defaults(png=True)
     parser.add_argument('-c', '--casa', dest='casa', help='casa version to use', default='casa')
-    default_surveys = ["NVSS","VLA FIRST (1.4 GHz)", "WENSS", "TGSS ADR1", "VLSSr", "SDSSr", "DSS", "2MASS-H"]
+    #default_surveys = ["NVSS","VLA FIRST (1.4 GHz)", "WENSS", "TGSS ADR1", "VLSSr", "SDSSr", "DSS", "2MASS-H"]
+    default_surveys = ["NVSS","VLA FIRST (1.4 GHz)", "WENSS", "TGSS ADR1", "VLSSr", "SDSSr", "DSS"]
     parser.add_argument('-s', '--surveys', dest='surveys',
                         type=str, nargs='+',
                         help='Whispace separated list of surveys',
@@ -90,7 +94,8 @@ if __name__ == '__main__':
     urls, valid_surveys, missing_surveys = get_url(coords=coords, surveys=surveys, radius=radius)
     download_image(coords=coords, surveys=valid_surveys, radius=radius, name=name)
     casa = args.casa
-    generate_png(name, casa)
+    if png:
+        generate_png(name, casa)
 
 
 
